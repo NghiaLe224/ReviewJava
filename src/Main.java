@@ -1,15 +1,21 @@
+import Inheritance.Employee;
+import Inheritance.SalariedEmployee;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Employee nghia = new Employee("Nghia", "27/04/1998", "1/2/2025");
+        System.out.println(nghia);
+        System.out.println("-----------");
+        Employee haiTrieu = new Employee("Trieu", "21/06/1998", "1/2/2025");
+        System.out.println(haiTrieu);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("-----------");
+
+        SalariedEmployee chung = new SalariedEmployee("Chung", "1/1/1991", "1/1/2025", 10000);
+        System.out.println(chung);
+        System.out.println("chung's Paycheck = $" + chung.collectPay());
+
     }
 }
