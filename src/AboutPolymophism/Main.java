@@ -41,5 +41,16 @@ public class Main {
 
         var airplane = Movie.getMovie("C", "Airplane");
         airplane.watchMovie();
+
+        System.out.println("----------");
+        Object unknownObject = Movie.getMovie("C", "Unknown");
+        if(unknownObject.getClass().getSimpleName().equals("Comedy")){
+            Comedy unknownComedy = (Comedy) unknownObject;
+            unknownComedy.watchComedy();
+        } else if (unknownObject instanceof Adventure){
+            ((Adventure) unknownObject).watchAdventure();
+        }else if (unknownObject instanceof ScienceFiction syfy){
+            syfy.watchScienceFiction();
+        }
     }
 }
