@@ -1,4 +1,4 @@
-package about_inheritance;
+package section8.about_inheritance;
 
 public class SalariedEmployee extends Employee {
     double annualSalary;

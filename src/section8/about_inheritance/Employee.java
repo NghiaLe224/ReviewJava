@@ -1,4 +1,4 @@
-package about_inheritance;
+package section8.about_inheritance;
 
 public class Employee extends Worker{
     private static long employeeNo = 1;

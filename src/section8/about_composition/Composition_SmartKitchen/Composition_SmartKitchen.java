@@ -1,4 +1,4 @@
-package about_composition.Composition_SmartKitchen;
+package section8.about_composition.Composition_SmartKitchen;
 
 public class Composition_SmartKitchen {
     private CoffeeMaker brewMaster;

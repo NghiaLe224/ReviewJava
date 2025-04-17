@@ -1,4 +1,4 @@
-package about_string;
+package section8.about_string;
 
 public class StringManipulation {
     public static void main(String[] args) {

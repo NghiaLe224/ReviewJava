@@ -1,4 +1,4 @@
-package about_composition;
+package section8.about_composition;
 
 public class Product {
     private String model;

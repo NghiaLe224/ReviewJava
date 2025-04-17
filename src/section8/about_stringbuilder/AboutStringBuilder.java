@@ -1,4 +1,4 @@
-package about_stringbuilder;
+package section8.about_stringbuilder;
 
 
 public class AboutStringBuilder {

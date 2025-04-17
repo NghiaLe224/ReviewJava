@@ -1,5 +1,5 @@
-import Inheritance.Employee;
-import Inheritance.SalariedEmployee;
+import section8.about_inheritance.Employee;
+import section8.about_inheritance.SalariedEmployee;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

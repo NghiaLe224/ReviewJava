@@ -1,4 +1,4 @@
-package about_composition.Composition_SmartKitchen;
+package section8.about_composition.Composition_SmartKitchen;
 
 public class ExecuteSmartKitchen {
     public static void main(String[] args) {

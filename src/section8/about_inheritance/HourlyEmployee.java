@@ -1,4 +1,4 @@
-package about_inheritance;
+package section8.about_inheritance;
 
 public class HourlyEmployee extends Employee{
     private double hourPayRate;

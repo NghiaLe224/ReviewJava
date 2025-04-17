@@ -1,4 +1,4 @@
-package oop_master_challenge;
+package section8.oop_master_challenge;
 
 public class Hamburger extends Item{
     private Item extraItem1;

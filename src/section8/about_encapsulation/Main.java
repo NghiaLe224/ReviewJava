@@ -1,4 +1,4 @@
-package about_encapsulation;
+package section8.about_encapsulation;
 
 public class Main {
     public static void main(String[] args) {
