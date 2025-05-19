@@ -1,2 +1,4 @@
-package section11.interfaces.challenge;public interface Mappable {
+package section11.interfaces.challenge;
+
+public interface Mappable {
 }

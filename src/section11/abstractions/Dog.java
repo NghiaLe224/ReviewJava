@@ -1,4 +1,4 @@
-package section11;
+package section11.abstractions;
 
 public class Dog extends Mammal {
 

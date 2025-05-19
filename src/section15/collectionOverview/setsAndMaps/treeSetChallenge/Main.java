@@ -1,2 +1,4 @@
-package section15.collectionOverview.setsAndMaps.treeSetChallenge;public class Main {
+package section15.collectionOverview.setsAndMaps.treeSetChallenge;
+
+public class Main {
 }

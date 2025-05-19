@@ -1,2 +1,5 @@
-package myTest.lambdaTest;public interface Animal {
+package myTest.lambdaTest;
+
+public interface Animal {
+    void run();
 }

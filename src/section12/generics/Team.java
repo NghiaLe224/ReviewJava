@@ -3,27 +3,36 @@ package section12.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SportsTeam {
+public class Team<T extends Player, S> {
 
     private String name;
-    private List<Player> teamMembers = new ArrayList<>();
+    private List<T> teamMembers = new ArrayList<>();
     private int totalWins = 0;
     private int totalLooses = 0;
     private int totalTies = 0;
+    private S affiliation;
 
-    public SportsTeam(String name) {
+    public Team(String name) {
         this.name = name;
     }
 
-    public void addTeamMember(Player teamMember) {
-        if(!teamMembers.contains(teamMember)) {
-            teamMembers.add(teamMember);
+    public Team(String name, S affiliation) {
+        this.name = name;
+        this.affiliation = affiliation;
+    }
+
+    public void addTeamMember(T t) {
+        if(!teamMembers.contains(t)) {
+            teamMembers.add(t);
         }
     }
 
     public void listTeamMembers() {
-        System.out.println(name + "Roster:");
-        System.out.println(teamMembers);
+        System.out.print(name + "Roster:");
+        System.out.println((affiliation == null ? "" : "AFFILIATION: " + affiliation));
+        for(T t : teamMembers) {
+            System.out.println(t.name());
+        }
     }
 
     public int ranking(){

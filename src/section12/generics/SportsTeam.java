@@ -3,19 +3,19 @@ package section12.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseballTeam {
+public class SportsTeam {
 
     private String name;
-    private List<BaseballPlayer> teamMembers = new ArrayList<>();
+    private List<Player> teamMembers = new ArrayList<>();
     private int totalWins = 0;
     private int totalLooses = 0;
     private int totalTies = 0;
 
-    public BaseballTeam(String name) {
+    public SportsTeam(String name) {
         this.name = name;
     }
 
-    public void addTeamMember(BaseballPlayer teamMember) {
+    public void addTeamMember(Player teamMember) {
         if(!teamMembers.contains(teamMember)) {
             teamMembers.add(teamMember);
         }

@@ -1,4 +1,4 @@
-package section11;
+package section11.abstractions;
 
 public class Horse extends Mammal{
     public Horse(String type, String size,double weight) {

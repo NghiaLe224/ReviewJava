@@ -1,2 +1,38 @@
-package section12.genericsExtra.util;public class QueryList {
+package section12.genericsExtra.util;
+
+import section12.genericsExtra.model.Student;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QueryList <T extends Student & Query> {
+
+    private List<T> items;
+
+    public QueryList(List<T> items) {
+        this.items = items;
+    }
+
+    public static <S extends Query> List<S> getMatches(List<S> items,
+                                                           String field, String value) {
+
+        List<S> matches = new ArrayList<>();
+        for (var item : items) {
+            if (item.matchFieldValue(field, value)) {
+                matches.add(item);
+            }
+        }
+        return matches;
+    }
+
+    public List<T> getMatches(String field, String value) {
+
+        List<T> matches = new ArrayList<>();
+        for (var item : items) {
+            if (item.matchFieldValue(field, value)) {
+                matches.add(item);
+            }
+        }
+        return matches;
+    }
 }

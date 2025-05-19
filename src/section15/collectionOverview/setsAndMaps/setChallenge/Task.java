@@ -1,2 +1,102 @@
-package section15.collectionOverview.setsAndMaps.setChallenge;public class Task {
+package section15.collectionOverview.setsAndMaps.setChallenge;
+enum Status {
+    IN_QUEUE, ASSIGNED, IN_PROGRESS;
+}
+
+enum Priority{
+    HIGH, MEDIUM, LOW;
+}
+public class Task implements Comparable<Task>{
+    private String project;
+    private String description;
+    private String assignee;
+    private Priority priority;
+    private Status status;
+
+    public Task(String project, String description, String assignee, Priority priority, Status status) {
+        this.project = project;
+        this.description = description;
+        this.assignee = assignee;
+        this.priority = priority;
+        this.status = status;
+    }
+
+    public Task(Priority priority, String assignee, String description, String project) {
+        this(project, description, assignee, priority, assignee == null ? Status.IN_QUEUE : Status.ASSIGNED);
+    }
+
+    public Task(String project, String description, Priority priority) {
+        this(priority, null, description, project);
+    }
+
+    public String getProject() {
+        return project;
+    }
+
+    public void setProject(String project) {
+        this.project = project;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getAssignee() {
+        return assignee;
+    }
+
+    public void setAssignee(String assignee) {
+        this.assignee = assignee;
+    }
+
+    public Priority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Task task = (Task) o;
+        return project.equals(task.project) && description.equals(task.description);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = project.hashCode();
+        result = 31 * result + description.hashCode();
+        return result;
+    }
+
+    @Override
+    public int compareTo(Task o) {
+        int projectCom = project.compareTo(o.project);
+        if(projectCom != 0){
+            return projectCom;
+        }
+        return description.compareTo(o.description);
+    }
+
+    @Override
+    public String toString() {
+        return "%-20s %-25s %-10s %-10s %s".formatted(project, description, priority,
+                assignee, status);
+    }
 }
